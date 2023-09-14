@@ -1,0 +1,108 @@
+header {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1.38rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 1rem;
+  
+    .header_left_side {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      span {
+        color: map-get($colors, "middle-text");
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 2rem;
+      }
+    }
+  
+    nav.navbar {
+      ul {
+        display: flex;
+        #check {
+          display: none;
+        }
+        .close-menu,
+        .open-menu {
+          display: none;
+        }
+        .buttons-nav {
+          display: none;
+          align-items: center;
+          gap: 0.6rem;
+          .try-demo {
+            @extend %first-button;
+          }
+          .buy-now {
+            @extend %second-button;
+          }
+        }
+        span {
+          display: flex;
+          gap: 3rem;
+          align-items: center;
+          li {
+            transition: 0.2s;
+            &:hover {
+              transform: scale(1.15);
+            }
+            a {
+              color: map-get($colors, "simple-text");
+              font-size: 1rem;
+              font-weight: 400;
+              line-height: 1.5rem;
+              &:hover {
+                color: map-get($colors, "danger");
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    div.search{
+        display: flex;
+        align-items: center;
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+        width: 0px;
+        height: 20px;
+        transition: width 0.5s ease-in-out ;
+        &:hover{
+            width: 195px;
+            border: 1px solid #d2d2d2;
+        }
+        input{
+            border: none;
+            outline: none ;
+            width: 0;
+            height: 20px;
+            border-radius: 0.5rem;
+            transition: width 0.5s ease-in-out ;
+        }
+        &:hover input{
+            width: 175px;
+        }
+    }
+  
+    .buttons-right {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      a:first-of-type {
+        display: inline-block;
+        @extend %first-button;
+      }
+      a:last-of-type {
+        display: inline-block;
+        @extend %second-button;
+      }
+    }
+  }
+  
+

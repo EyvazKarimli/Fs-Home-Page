@@ -1,0 +1,548 @@
+section.heading{
+    margin-top: 7.25rem;
+    text-align: center;
+    p:first-of-type{
+        margin: 0 auto;
+        width: 70%;
+        span{
+            color: map-get($colors, "danger" );
+        }
+        font-size: 3.75rem;
+        font-weight: 600;
+        line-height: 4.5rem;
+        margin-bottom: 2rem;
+    }
+    p:last-of-type{
+        margin: 0 auto;
+        width: 70%;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5rem;;
+        color: #8F9BB3;
+        margin-bottom: 3.5rem;
+    }
+    .heading_buttons{
+        margin-bottom: 4.5rem;
+        a:first-of-type{
+            display: inline-block;
+            background-color: #0095FF;
+            color: white;
+            margin-right: 1rem;
+            @extend %general-button;
+        }
+        a:last-of-type{
+            display: inline-block;
+            border: 1px solid #0095FF;
+            color: #0095FF;
+            @extend %general-button;
+        }
+    }
+}
+
+
+
+section.report{
+    text-align: center;
+    margin-bottom: 7rem;
+    .report-img{
+        position: relative;
+        z-index: 1;
+         img{
+            width: 70%;
+
+        }
+    }
+
+    .report-background{
+        position: relative;
+        background-color: map-get($colors, "background" );
+        margin-top: -10rem;
+        height: 31rem;
+        p{
+            color: map-get($colors, "simple-text" );
+            width: 70%;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 2.5rem;
+            text-align: center;
+            padding-top: 11rem;
+        }
+        .rectangular-1{
+            @extend %rectangular;
+            background-color: #FFD6D9;
+            border-radius: 2.25rem 0.25rem 2.25rem 2.25rem;
+            top: 70%;
+            left: 90%;
+        }
+        .rectangular-2{
+            background-color: #FFA8B4;
+            @extend %rectangular;
+            border-radius: 50% 50rem 50rem  50%;
+            top: 80%;
+            left: 20%;
+        }
+        .dots{
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0.5rem, 1.5rem));
+            grid-template-rows: repeat(4);
+            gap: 0.75rem;
+            top: 65%;
+            left: 10.8%;
+
+            .dot{
+                width: 1.5rem;
+                height: 1.5rem;
+                border: 2px solid #FFD6D9;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+section.plan{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:0 auto;
+    margin-bottom: 11rem;
+    .about-plan{
+        flex-basis: 28%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        p:nth-child(1){
+            a{
+                color: #0095FF;
+                font-size: 1.25rem;
+                font-weight: 400;
+                line-height: 1.75rem;
+            }
+        }
+        p:nth-child(2){
+            color: map-get($colors,"middle-text" );
+            font-size: 2.125rem;
+            font-weight: 600;
+            line-height: 2.5rem
+        }
+        p:nth-child(3){
+            color: #8F9BB3;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+    }
+
+}
+
+article.todo_list{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 8.5rem;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(17rem, 24rem) );
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: 6rem  3rem;
+    .card{
+        width: 24rem;
+        border-radius: 5rem;
+        padding: 1rem 0.8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        transform: scale(1);
+        transition: 0.5s;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+        &:hover{
+            transform: scale(1.1);
+            background-color: map-get($colors,"background" );
+        }
+        .card_icon{
+            position: relative;
+            width: 4rem;
+            height: 4rem;
+            margin-bottom: 2rem;
+            img{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        p:first-of-type{
+            font-size: 1.25rem;
+            color: map-get($colors, "simple-text" );
+            font-weight: 400;
+            line-height: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        p:last-of-type{
+            font-size: 0.875rem;
+            color: map-get($colors, "simple-text" );
+            font-weight: 400;
+            line-height: 1.25rem; 
+        }
+
+        .clock{
+            background-color: map-get($colors, "danger" );
+            border-radius: 50%;
+        }
+        .trend-up-1{
+            background-color: #00D68F;
+            border-radius: 50% 5%  50%  50%;
+        }
+        .person{
+            background-color: #0095FF;
+            border-radius: 50% 5%  5%  50%;
+        }
+        .refresh{
+            background-color: #FFAA00;
+            border-radius: 50% 5%  5%  5%;
+        }
+        .phone-call{
+            background-color: #FF3DB1;
+            border-radius: 5% 50%  50%  5%;
+        }
+        .trend-up-2{
+            background-color: #9C61FE;
+            border-radius: 50%;
+        }
+    }
+}
+
+.social-media{
+    background-color: #FFD6D9;
+    padding: 7.8%;
+    margin-bottom: 6rem;
+    &_heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 4rem;
+        &_text p:first-of-type{
+            color: map-get($colors,"middle-text" );
+            font-size: 2.125rem;
+            font-weight: 600;
+            line-height: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        &_text p:last-of-type{
+            max-width: 30.5rem;
+            color: map-get($colors,"middle-text" );
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem
+        }
+        &_button{
+            background-color: #0095FF;
+            @extend %general-button;
+            a{
+                color: white;
+            }
+        }
+    }
+    &_cards{
+        width: 100%;
+        display: grid;  
+        grid-template-columns: repeat( auto-fit, 17.5rem );
+        grid-template-rows: auto;
+        justify-content: center;
+        gap: 2rem;
+        &_card{
+            display: flex;
+            background-color: white;
+            max-height: 7rem;
+            min-height: 6rem;
+            gap: 1rem;
+            border-radius: 1rem;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;            transition: 0.3s;
+            cursor: pointer;
+            &:hover{
+                transform: scale(1.2);
+                background-color:  map-get($colors,"hover-color" );
+            }
+            &_icon{
+                position: relative;
+                width: 3rem;
+                height: 3rem;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                background-color: #0095FF;
+                border-radius: 50%;
+                img{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+                &.facebook{
+                    background-color: #45C4FC;
+                }
+                &.twitter{
+                    background-color: #1CACEE;
+                }
+                &.instagram{
+                    background-color: #F140AA;
+                }
+                &.linkedin{
+                    background-color: #1CACEE;
+                }
+                &.pinterest{
+                    background-color: #C8232C;
+                }
+                &.google{
+                    background-color: #E3EEFF;
+                }
+                &.telegram{
+                    background-color: #1588CC;
+                }
+                &.reddit{
+                    background-color: #FD431D;
+                }
+                &.tumblr{
+                    background-color: #34465D;
+                }
+                &.medium{
+                    background-color: #1B1A19;
+                }
+                &.vk{
+                    background-color: #4376A6;
+                }
+                &.ok{
+                    background-color: #F77A00;
+                }
+                &.wordpress{
+                    background-color: #21759B;
+                }
+                &.plurk{
+                    background-color: #EA4640;
+                }
+            }
+            &_text{
+                margin-top: 1.25rem;
+                p:first-of-type{
+                    margin-bottom: 0.5rem;
+                    color: map-get($colors, "simple-text" );
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    line-height: 1.75rem;
+                }
+                p:last-of-type{
+                    width: 11.5rem;
+                    color: map-get($colors, "simple-text" );
+                    font-size: 0.75rem;
+                    font-weight: 400;
+                    line-height: 1rem;
+                }
+            }
+
+        }
+    }
+}
+
+.features{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    &_heading{
+        text-align: center;
+        margin-bottom: 3.5rem;
+        p:first-of-type{
+            color: map-get($colors,"middle-text" );
+            font-size: 2.125rem;
+            font-weight: 600;
+            line-height: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        p:last-of-type{
+            max-width: 24rem;
+            min-width: 20.5rem;
+            margin: 0 auto;
+            color: #8F9BB3;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+    }
+
+    &_first-part{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &_img{
+            display: flex;
+            position: relative;
+            img{
+                z-index: 1;
+            }
+            &_bg{
+                position: absolute;
+                width: 11rem;
+                height: 20rem;
+                background-color: #FFF2F2;
+                border-radius: 1.5rem;
+                top: -2.5rem;
+                left: -30%;
+            }
+        }
+    }
+
+
+    &_second-part{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        &_img{
+            display: flex;
+            position: relative;
+            img{
+                z-index: 1;
+            }
+            &_bg{
+                position: absolute;
+                width: 11rem;
+                height: 20rem;
+                background-color: #F2F8FF;
+                border-radius: 1.5rem;
+                top: -2.5rem;
+                left: 75%;
+            }
+        }
+        
+    }
+
+    &_third-part{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8.5rem;
+        margin-bottom: 7rem;
+        &_img{
+            display: flex;
+            position: relative;
+            img{
+                z-index: 1;
+            }
+            &_bg{
+                position: absolute;
+                width: 11rem;
+                height: 20rem;
+                background-color: #F0FFF5;
+                border-radius: 1.5rem;
+                top: -2.5rem;
+                left: -30%;
+            }
+        }
+    }
+    .pharagraph{
+        width: 24rem;
+        p:first-of-type{
+            color: map-get($colors,"simple-text" );
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 2rem;
+            margin-bottom: 1rem;
+        }
+        p:last-of-type{
+            color: map-get($colors,"simple-text" );
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5rem;
+        }
+    }
+    &_button{
+        margin: 0 auto;
+        margin-bottom: 10rem;
+        & a{
+            @extend %general-button;
+            background-color: #0095FF;
+            color: white;
+        }
+    }
+}
+ 
+
+
+
+.data{
+    background-color: #FF708D;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 6rem;
+    &_text{
+        p:first-of-type{
+            text-align: center;
+            color: white;
+            font-size: 6rem;
+            font-weight: 600;
+            line-height: 7.5rem;
+            margin-top: 5.5rem;
+
+        }
+        p:last-of-type{
+            font-size: 1.25rem;
+            font-weight: 400;
+            line-height: 1.75rem; 
+            color: white;
+            text-align: center;
+        }
+        &_circle-first{
+            width: 20rem;
+            height: 10rem;
+            background: var(--transparent-basic-white-8, rgba(255, 255, 255, 0.08));
+            border-radius: 10rem 10rem 0 0;
+            margin-top: -7%;
+            overflow: hidden;
+        }
+        &_circle-second{
+            width: 10rem;
+            height: 5rem;
+            border-radius: 10rem 10rem 0 0;
+            margin-top: -30%;
+            margin-left: 25%;
+            background-color: rgba(255, 255, 255, 0.425);
+            overflow: hidden;
+        }
+    }
+
+}
+
+.world-customer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+    img{
+        width: 50%;
+    }
+    p:first-of-type{
+        color: map-get($colors,"middle-text" );
+        font-size: 2.125rem;
+        font-weight: 600;
+        line-height: 2.5rem;
+    }
+    p:last-of-type{
+        width: 25%;
+        text-align: center;
+        color: #8F9BB3;
+        font-weight: 400;
+        line-height: 1.5rem;
+    }
+}
+
+
+    
