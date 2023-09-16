@@ -1,13 +1,164 @@
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;  
+  height: 100%;
+  background-color: #cbcbcbb1;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s all;
+  z-index: 20;
+}
+
+.burger-navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  transform: translateX(-100%);
+  transition:  0.3s transform;
+  z-index: 21;
+  ul{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
+    gap: 6rem;
+    span{
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      padding-left: 2.5rem;
+      li{
+        padding: 1rem;
+        width: 80%;
+        height: 100%;
+        transform: scale(1);
+        transition: 0.3s all;
+        &:hover{
+          transform: translateX(1rem);
+        }
+        a{
+          color: map-get($colors, "simple-text");
+          font-size: 1.5rem;
+          font-weight: 500;
+          line-height: 1.5rem;
+          transition: 0.3s all;
+          &:hover{
+            color: map-get($colors, "danger" );
+          }
+        }
+      }
+    }
+    .buttons-nav{
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      a{
+        text-align: center;
+        width: 80%;
+        padding: 0.65rem 1.65rem;
+      }
+      a:first-of-type{
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background-color: map-get($colors, "danger" );
+        border-radius: 0.5rem;
+      }
+      a:last-of-type{
+        color: black;
+        font-size: 1.5rem;
+        font-weight: 500;
+        background-color: white;
+        border-radius: 0.5rem;
+        border: 1px solid black;
+      }
+    }
+  }
+
+}
+
+#menu-check{
+  display: none;
+  &:checked {
+    & ~ .backdrop{
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(300px);
+    }
+    & ~ .burger-navbar{
+      transform: translateX(0);
+    }
+    & ~ header {
+      transform: translateX(300px);
+        .burger-menu{
+          span{
+            background: transparent;
+            &::before{
+              transform: rotate(45deg);
+              bottom: 0;
+              transition: 0.3s  0.3s transform, 0.3s bottom ;
+            }
+            &::after{
+              transform: rotate(-45deg);
+              top: 0;
+              transition: 0.3s 0.3s   transform,  0.3s top ;
+            }
+          }
+        }
+    }
+  }
+}
+
 header {
     width: 95%;
     margin: 0 auto;
     margin-top: 1.38rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     text-align: center;
     gap: 1rem;
+    transition: 0.3s transform;
+    .burger-menu-container{
+      display: none;
+      cursor: pointer;
+      .burger-menu{
+        --height: 3px;
+        --space: calc(var(--height) * 2.5);
+        width: calc(var(--space ) * 4);
+        height: calc(var(--height) + (var(--space) * 2) );
+        span, span::before, span::after {
+          content: '';
+          display: block;
+          height: var(--height);
+          width: calc(var(--space ) * 4);;
+          background: #222;
+          cursor: pointer;
+        }
+          span{
+            transform: translateY(var(--space));
+            transition: 0.3s 0.3s  all;
+            &::before{
+              position: absolute;
+              bottom: var(--space);
+              transition: 0.3s transform, 0.3s 0.3s bottom ;
+          }
+            &::after{
+              position: absolute;
+              top: var(--space);
+              transition: 0.3s transform, 0.3s  0.3s top ;
+          }
+        }
+      }
+    }
   
     .header_left_side {
       display: flex;
@@ -24,24 +175,6 @@ header {
     nav.navbar {
       ul {
         display: flex;
-        #check {
-          display: none;
-        }
-        .close-menu,
-        .open-menu {
-          display: none;
-        }
-        .buttons-nav {
-          display: none;
-          align-items: center;
-          gap: 0.6rem;
-          .try-demo {
-            @extend %first-button;
-          }
-          .buy-now {
-            @extend %second-button;
-          }
-        }
         span {
           display: flex;
           gap: 3rem;
@@ -94,15 +227,19 @@ header {
         display: flex;
         align-items: center;
         gap: 0.75rem;
-      a:first-of-type {
+        div .try-demo {
         display: inline-block;
         @extend %first-button;
       }
-      a:last-of-type {
+        div .buy-now{
         display: inline-block;
         @extend %second-button;
       }
     }
   }
   
+
+
+
+
 

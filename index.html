@@ -13,30 +13,46 @@
 
 <body>
     <!-- The "header" contains the company's logo and name, menu, search and shopping buttons. -->
+    <input type="checkbox" id="menu-check">
+    <nav class="burger-navbar">
+        <ul>
+            <span>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Support</a></li>
+            </span>
+            <div class="buttons-nav">
+                <a href="#" class="try-demo">BUY NOW - $45</a>
+                <a href="#" class="buy-now">Try demo</a>
+            </div>
+        </ul>
+    </nav>
+    <label for="menu-check" class="backdrop"></label>
+
+    
     <header>
+        <div class="burger-menu-container">
+            <label class="burger-menu" for="menu-check">
+                <span></span>
+            </label>
+        </div>
         <div class="header_left_side">
             <div class="logo">
                 <img src="./assets/image/logo.svg" alt="logo" />
             </div>
             <span>FS Poster</span>
         </div>
-
         <nav class="navbar">
             <ul>
-                <input type="checkbox" id="check" />
                 <span>
                     <li><a href="#">Features</a></li>
                     <li><a href="#">Docs</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">FAQ</a></li>
                     <li><a href="#">Support</a></li>
-                    <label for="check" class="close-menu"><i class="fa-solid fa-xmark"></i></label>
                 </span>
-                <label for="check" class="open-menu"><i class="fa-solid fa-bars"></i></label>
-                <div class="buttons-nav">
-                    <a href="#" class="try-demo">Try demo</a>
-                    <a href="#" class="buy-now">BUY NOW - $45</a>
-                </div>
             </ul>
         </nav>
 
@@ -46,21 +62,27 @@
         </div>
 
         <div class="buttons-right">
-            <a href="#">Try demo</a>
-            <a href="#">BUY NOW - $45</a>
+            <div><a href="#" class="try-demo">Try demo</a></div>
+            <div><a href="#" class="buy-now">BUY NOW - $45</a></div>
         </div>
         <!-- "header" has been completed successfully -->
     </header>
 
-    <main>
+
+
         <!-- "main" contains  sections and articles -->
+    <main>
+
         <section class="heading">
-            <p><span>“FS Poster”</span> WordPress Auto Poster And Scheduler</p>
+            <p class="heading_h1"><span>“FS Poster”</span> WordPress Auto Poster And Scheduler</p>
             <p>
                 Do not waste your time to share your posts on social networks. Let the
                 FS Poster plugin share posts for you and get rid of boring and
                 time-consuming manual works. Why are you waiting? Try the free demo!
             </p>
+            <div >
+                <img src="./assets/image/report.png" alt="" class="heading_img">
+            </div>
             <div class="heading_buttons">
                 <a class="try-now" href="#">TRY RIGHT NOW</a>
                 <a class="watch-video" href="#">WATCH VIDEO</a>
@@ -105,7 +127,7 @@
             </div>
         </section>
 
-        <section class="plan">
+            <section class="plan">
             <div class="about-plan">
                 <p><a href="#">Benefits</a></p>
                 <p>Plan and collaborate on your content</p>
@@ -120,7 +142,7 @@
             </div>
         </section>
 
-        <article class="todo_list">
+         <article class="todo_list">
             <div class="card">
                 <div class="card_icon clock">
                     <img src="./assets/image/clock.svg" alt="clock" />
@@ -184,163 +206,168 @@
         </article>
 
         <section class="social-media">
-            <div class="social-media_heading">
-                <div class="social-media_heading_text">
-                    <p>“FS Poster” Supports 14 Social Networks</p>
-                    <p>
-                        You will be able to publish your WordPress posts to 14 social
-                        networks at the same time:
-                    </p>
+            <div class="social-media_container">
+                <div class="social-media_heading">
+                    <div class="social-media_heading_text">
+                        <p>“FS Poster” Supports 14 Social Networks</p>
+                        <p>
+                            You will be able to publish your WordPress posts to 14 social
+                            networks at the same time:
+                        </p>
+                    </div>
+                    <div class="social-media_heading_button">
+                        <a href="#" class="heading_button">TRY RIGHT NOW</a>
+                    </div>
                 </div>
-                <div class="social-media_heading_button">
-                    <a href="#">TRY RIGHT NOW</a>
+    
+                <div class="social-media_cards">
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon facebook">
+                            <img src="./assets/image/social-media/facebook.svg" alt="facebook" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Facebook</p>
+                            <p>Accounts, personal pages, groups</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon twitter">
+                            <img src="./assets/image/social-media/twitter.svg" alt="twitter" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Twitter</p>
+                            <p>Accounts</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon instagram">
+                            <img src="./assets/image/social-media/Instagram.svg" alt="instagram" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Instagram</p>
+                            <p>Accounts</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon linkedin">
+                            <img src="./assets/image/social-media/linkedin.svg" alt="linkedin" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Linkedin</p>
+                            <p>Accounts, company pages</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon pinterest">
+                            <img src="./assets/image/social-media/pinterest.svg" alt="pinterest" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Pinterest</p>
+                            <p>Boards</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon google">
+                            <img src="./assets/image/social-media/google-my-busines.svg" alt="google" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Google My business</p>
+                            <p>Locations</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon telegram">
+                            <img src="./assets/image/social-media/telegram.svg" alt="telegram" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Telegram</p>
+                            <p>Chats, channels, groups</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon reddit">
+                            <img src="./assets/image/social-media/reddit.svg" alt="reddit" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Reddit</p>
+                            <p>Accounts, subreddits</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon tumblr">
+                            <img src="./assets/image/social-media/tumblr.svg" alt="tumblr" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Tumblr</p>
+                            <p>Blogs</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon medium">
+                            <img src="./assets/image/social-media/medium.svg" alt="medium" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Medium</p>
+                            <p>Profiles, publications</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon vk">
+                            <img src="./assets/image/social-media/vk.svg" alt="vk" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>VK</p>
+                            <p>Accounts, pages, groups, events</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon ok">
+                            <img src="./assets/image/person.svg" alt="ok" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Ok.ru</p>
+                            <p>Accounts, groups</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon wordpress">
+                            <img src="./assets/image/social-media/Group 5606.svg" alt="wordpress" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Wordpress</p>
+                            <p>WordPress based web-sites</p>
+                        </div>
+                    </a>
+    
+                    <a class="social-media_cards_card">
+                        <div class="social-media_cards_card_icon plurk">
+                            <img src="./assets/image/social-media/plurk.svg" alt="plurk" />
+                        </div>
+                        <div class="social-media_cards_card_text">
+                            <p>Plurk</p>
+                            <p>Accounts</p>
+                        </div>
+                    </a>
+                    <div class="social-media_heading_button">
+                        <a href="#" class="heading_button">TRY RIGHT NOW</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="social-media_cards">
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon facebook">
-                        <img src="./assets/image/social-media/facebook.svg" alt="facebook" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Facebook</p>
-                        <p>Accounts, personal pages, groups</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon twitter">
-                        <img src="./assets/image/social-media/twitter.svg" alt="twitter" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Twitter</p>
-                        <p>Accounts</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon instagram">
-                        <img src="./assets/image/social-media/Instagram.svg" alt="instagram" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Instagram</p>
-                        <p>Accounts</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon linkedin">
-                        <img src="./assets/image/social-media/linkedin.svg" alt="linkedin" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Linkedin</p>
-                        <p>Accounts, company pages</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon pinterest">
-                        <img src="./assets/image/social-media/pinterest.svg" alt="pinterest" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Pinterest</p>
-                        <p>Boards</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon google">
-                        <img src="./assets/image/social-media/google-my-busines.svg" alt="google" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Google My business</p>
-                        <p>Locations</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon telegram">
-                        <img src="./assets/image/social-media/telegram.svg" alt="telegram" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Telegram</p>
-                        <p>Chats, channels, groups</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon reddit">
-                        <img src="./assets/image/social-media/reddit.svg" alt="reddit" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Reddit</p>
-                        <p>Accounts, subreddits</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon tumblr">
-                        <img src="./assets/image/social-media/tumblr.svg" alt="tumblr" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Tumblr</p>
-                        <p>Blogs</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon medium">
-                        <img src="./assets/image/social-media/medium.svg" alt="medium" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Medium</p>
-                        <p>Profiles, publications</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon vk">
-                        <img src="./assets/image/social-media/vk.svg" alt="vk" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>VK</p>
-                        <p>Accounts, pages, groups, events</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon ok">
-                        <img src="./assets/image/person.svg" alt="ok" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Ok.ru</p>
-                        <p>Accounts, groups</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon wordpress">
-                        <img src="./assets/image/social-media/Group 5606.svg" alt="wordpress" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Wordpress</p>
-                        <p>WordPress based web-sites</p>
-                    </div>
-                </a>
-
-                <a class="social-media_cards_card">
-                    <div class="social-media_cards_card_icon plurk">
-                        <img src="./assets/image/social-media/plurk.svg" alt="plurk" />
-                    </div>
-                    <div class="social-media_cards_card_text">
-                        <p>Plurk</p>
-                        <p>Accounts</p>
-                    </div>
-                </a>
             </div>
         </section>
 
-        <article class="features">
+       <article class="features">
             <div class="features_heading">
                 <p>Features we provide</p>
                 <p>
@@ -348,7 +375,7 @@
                 </p>
             </div>
 
-            <div class="features_first-part">
+            <div class="features_first-part part">
                 <div class="features_first-part_img">
                     <div class="features_first-part_img_bg"></div>
                     <img src="./assets/image/undraw_Browsing_online_re_umsa 1.png" alt="" />
@@ -362,7 +389,7 @@
                 </div>
             </div>
 
-            <div class="features_second-part">
+            <div class="features_second-part part">
                 <div class="features_second-part_text pharagraph">
                     <p>Direct share</p>
                     <p>
@@ -376,7 +403,7 @@
                 </div>
             </div>
 
-            <div class="features_third-part">
+            <div class="features_third-part part">
                 <div class="features_third-part_img">
                     <div class="features_third-part_img_bg"></div>
                     <img src="./assets/image/undraw_social_dashboard_k3pt 1 (1).png" alt="" />
@@ -396,24 +423,24 @@
             </div>
         </article>
 
-        <section class="data">
-            <div class="data_text">
+         <section class="data">
+            <div class="data_text first-data">
                 <p>6K</p>
                 <p>Happy customers</p>
-                <div class="data_text_circle-first"></div>
-                <div class="data_text_circle-second"></div>
+                <div class="data_text_circle-first circle"></div>
+                <div class="data_text_circle-second circle"></div>
             </div>
-            <div class="data_text">
+            <div class="data_text second-data">
                 <p>5500</p>
                 <p>Installation</p>
-                <div class="data_text_circle-first"></div>
-                <div class="data_text_circle-second"></div>
+                <div class="data_text_circle-first circle"></div>
+                <div class="data_text_circle-second circle"></div>
             </div>
-            <div class="data_text">
+            <div class="data_text third-data">
                 <p>4.98</p>
                 <p>Rating</p>
-                <div class="data_text_circle-first"></div>
-                <div class="data_text_circle-second"></div>
+                <div class="data_text_circle-first circle"></div>
+                <div class="data_text_circle-second circle"></div>
             </div>
         </section>
 
@@ -497,11 +524,19 @@
                     </div>
                 </div>
             </div>
+            <div class="blog_heading_link bottom-link">
+                <a href="#blog"> See all blogs </a>
+                <a href="#blog">
+                    <img src="./assets/image/arrow-right.svg" alt="" /></a>
+            </div>
 
             <div class="blog_subscribe">
                 <p>Subscribe To Our Newsletter</p>
-                <input type="text" placeholder="Your email" />
-                <button>Subscribe</button>
+                <div class="blog_subscribe_button">
+                    <input type="text" placeholder="Your email" />
+                    <a>Subscribe</a>
+                </div>
+
             </div>
         </article>
 
@@ -609,17 +644,16 @@
             </div>
 
             <div class="top-box_contact">
-                <p class="first-text">Contact</p>
+                <a class="first-text">Contact</a>
                 <div class="top-box_contact_mail">
                     <img src="./assets/image/footer/email.svg" alt="" />
                     <span class="text">info@fs-poster.com</span>
                 </div>
                 <div class="top-box_contact_icon">
-                    <a href=""><img src="./assets/image/footer/Instagram.svg" alt="" /></a>
-                    <a href=""><img src="./assets/image/footer/facebook.svg" alt="" /></a>
-                    <a href="">
-                        <img src="./assets/image/footer/telegram.svg" alt="" /></a>
-                    <a href=""><img src="./assets/image/footer/youtube.svg" alt="" /></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
         </div>
