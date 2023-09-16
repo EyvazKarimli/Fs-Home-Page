@@ -152,6 +152,18 @@
         width: 100%;
       }
     }
+    article.features{
+      justify-content: center;
+      div.part{
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        align-items: center;
+      }
+    }
   }
 }
 

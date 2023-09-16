@@ -184,6 +184,18 @@ button {
     flex-direction: column;
     width: 100%;
   }
+  main article.features {
+    justify-content: center;
+  }
+  main article.features div.part {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    align-items: center;
+  }
 }
 @media screen and (max-width: 560px) {
   main section.heading div:first-of-type .heading_img {
