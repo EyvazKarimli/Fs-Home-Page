@@ -412,8 +412,8 @@ footer .top-box_contact_icon a i, .slide_author_img img, .slide_container_arrow-
 .burger-navbar ul {
   display: flex;
   flex-direction: column;
-  margin-top: 5rem;
-  gap: 6rem;
+  margin-top: 2rem;
+  gap: 2rem;
 }
 .burger-navbar ul span {
   display: flex;
@@ -424,7 +424,7 @@ footer .top-box_contact_icon a i, .slide_author_img img, .slide_container_arrow-
 .burger-navbar ul span li {
   padding: 1rem;
   width: 80%;
-  height: 100%;
+  height: 80%;
   transform: scale(1);
   transition: 0.3s all;
 }
